@@ -86,19 +86,21 @@ function highScoreWord(str) {
     let currentWordTally=0;
 
     while (counter < currentWord.length) {
-      character = currentWord.charAt(counter).toLowerCase();
+      let character = currentWord.charAt(counter).toLowerCase();
       currentWordTally += (letters.indexOf(character) + 1);
-      newNumber = parseInt(currentWordTally)             
       counter++;
      }
-     wordValueArray.push(newNumber);
+     wordValueArray.push(currentWordTally);
+
   }
   console.log(wordValueArray);
   let highBid = Math.max.apply(null, wordValueArray);
-  let index = wordValueArray.map(x => x == highBid);
-  console.log(index);
+  console.log(highBid);
+  console.log(str);
+  let index = wordValueArray.indexOf(highBid);
+  console.log(words[index]);
 };
 
 highScoreWord(practiceString);
-
+highScoreWord("Oh what a wonderful morning, oh what a wonderful day!")
 // End #4
