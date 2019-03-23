@@ -93,14 +93,55 @@ function highScoreWord(str) {
      wordValueArray.push(currentWordTally);
 
   }
+  // compare to find highest word value
   console.log(wordValueArray);
   let highBid = Math.max.apply(null, wordValueArray);
   console.log(highBid);
   console.log(str);
   let index = wordValueArray.indexOf(highBid);
+  // returns word with matching index
   console.log(words[index]);
 };
 
 highScoreWord(practiceString);
 highScoreWord("Oh what a wonderful morning, oh what a wonderful day!")
 // End #4
+
+// Start #5   Circle of Numbers
+function circleOfNumbers(n, firstNumber) {
+  // let totalNumbers = (n + 1) - firstNumber;
+  // console.log(totalNumbers);
+  // let half = totalNumbers/2;
+  // console.log(half)
+  // let opposite = firstNumber + half;
+  // console.log(opposite);
+
+    console.log ((firstNumber + n/2) % n)
+
+}
+
+circleOfNumbers(10, 7);
+
+
+// End #5
+
+
+// Start #6  "Who is going to pay for the wall?""
+
+function whoIsPaying(name){
+  // show full name 
+  var finalProduct = [];
+  finalProduct.push(name);
+  // if name <= 2 characters, return name
+  if (name.length <= 2) {
+  console.log(finalProduct);
+  }
+  else {
+  // show two letters from each neighbors names as array
+  var firstTwo = name.slice(0,2);
+  finalProduct.push(firstTwo);
+  console.log(finalProduct);
+  }
+}
+
+whoIsPaying("Gopher");
