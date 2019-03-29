@@ -83,15 +83,14 @@ function highScoreWord(str) {
   for (let i = 0; i < words.length; i++) {
     let currentWord = words[i];
     let counter = 0;
-    let currentWordTally=0;
+    let currentWordTally = 0;
 
     while (counter < currentWord.length) {
       let character = currentWord.charAt(counter).toLowerCase();
-      currentWordTally += (letters.indexOf(character) + 1);
+      currentWordTally += letters.indexOf(character) + 1;
       counter++;
-     }
-     wordValueArray.push(currentWordTally);
-
+    }
+    wordValueArray.push(currentWordTally);
   }
   // compare to find highest word value
   console.log(wordValueArray);
@@ -101,10 +100,10 @@ function highScoreWord(str) {
   let index = wordValueArray.indexOf(highBid);
   // returns word with matching index
   console.log(words[index]);
-};
+}
 
 highScoreWord(practiceString);
-highScoreWord("Oh what a wonderful morning, oh what a wonderful day!")
+highScoreWord("Oh what a wonderful morning, oh what a wonderful day!");
 // End #4
 
 // Start #5   Circle of Numbers
@@ -116,32 +115,49 @@ function circleOfNumbers(n, firstNumber) {
   // let opposite = firstNumber + half;
   // console.log(opposite);
 
-    console.log ((firstNumber + n/2) % n)
-
+  console.log((firstNumber + n / 2) % n);
 }
 
 circleOfNumbers(10, 7);
-
-
 // End #5
 
-
 // Start #6  "Who is going to pay for the wall?""
-
-function whoIsPaying(name){
-  // show full name 
+function whoIsPaying(name) {
+  // show full name
   var finalProduct = [];
   finalProduct.push(name);
   // if name <= 2 characters, return name
   if (name.length <= 2) {
-  console.log(finalProduct);
-  }
-  else {
-  // show two letters from each neighbors names as array
-  var firstTwo = name.slice(0,2);
-  finalProduct.push(firstTwo);
-  console.log(finalProduct);
+    console.log(finalProduct);
+  } else {
+    // show two letters from each neighbors names as array
+    var firstTwo = name.slice(0, 2);
+    finalProduct.push(firstTwo);
+    console.log(finalProduct);
   }
 }
 
 whoIsPaying("Gopher");
+// Efficient Solution
+//function whoIsPaying(name){
+//return (name.length>2)?([name, name.substr(0,2)]):[name];
+//}
+// End #6
+
+// Start #7  Reverse words
+// Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+// "This is an example!" ==> "sihT si na !elpmaxe"
+// "double  spaces"      ==> "elbuod  secaps"
+
+function reverseWords(str) {
+  return str.split("").reverse().join("").split(" ").reverse().join(" ")
+  }
+
+console.log(reverseWords("The quick brown fox jumped over the lazy dog."));
+
+// Thanks for that one Stack Overflow
+// End #7
+
+
+// Start #8   After(?)Midnight
+
