@@ -214,10 +214,21 @@ lowercaseCount("this is SHOUTING");
 
 // Start #10  Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
   function remove(s,n){
-    for (var i=0;i<n;i++) s=s.replace("!","");
+    for (var i=0;i<n;i++) {
+    s = s.replace("!","");
+    }
     console.log(s);
-    return s;
-  }
-
+    return s
+    }
 
 remove("!bel!!i!!!eve!!!", 7);
+// End #10
+
+// Start #11  Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
+function replace(s){
+  console.log(s.replace(/[aeoiu]/ig, '!'))
+  return s.replace(/[aeoiu]/ig, '!')
+}
+
+  replace("aeiou")
+  replace("What is Going On??")
