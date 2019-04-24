@@ -150,14 +150,74 @@ whoIsPaying("Gopher");
 // "double  spaces"      ==> "elbuod  secaps"
 
 function reverseWords(str) {
-  return str.split("").reverse().join("").split(" ").reverse().join(" ")
-  }
+  return str
+    .split("")
+    .reverse()
+    .join("")
+    .split(" ")
+    .reverse()
+    .join(" ");
+}
 
 console.log(reverseWords("The quick brown fox jumped over the lazy dog."));
 
 // Thanks for that one Stack Overflow
 // End #7
 
+// Start #8   Filter out the Geese
+var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+var birds = [
+  "Goosers",
+  "Bumbles",
+  "African",
+  "Canadian",
+  "Steinbacher",
+  "Superbad"
+];
 
-// Start #8   After(?)Midnight
+function gooseFilter(birds) {
+  console.log(birds.filter(b => !geese.includes(b)));
+}
 
+// Function reference
+function filterFun(b) {
+  console.log(!geese.includes(b));
+}
+birds.filter(filterFun);
+
+// Anonymous function
+// birds.filter(function (b) {
+//   console.log( !geese.includes(b));
+// })
+// Arrow function with full body
+// birds.filter((b) => {
+//   console.log( !geese.includes(b));
+// })
+
+// One line shortcut. Just one statement which automatic is acted as a return
+console.log("wtf?  " + birds.filter(b => !geese.includes(b)));
+
+gooseFilter(birds);
+filterFun(birds);
+
+// End #8
+
+// Start #9  Regex count lowercase letters
+function lowercaseCount(str) {
+  var lowers = str.match(/[a-z]/g);
+  console.log(lowers ? lowers.length : 0);
+}
+
+lowercaseCount(practiceString);
+lowercaseCount("this is SHOUTING");
+// End #9
+
+// Start #10  Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
+  function remove(s,n){
+    for (var i=0;i<n;i++) s=s.replace("!","");
+    console.log(s);
+    return s;
+  }
+
+
+remove("!bel!!i!!!eve!!!", 7);
