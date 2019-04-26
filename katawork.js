@@ -213,22 +213,51 @@ lowercaseCount("this is SHOUTING");
 // End #9
 
 // Start #10  Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
-  function remove(s,n){
-    for (var i=0;i<n;i++) {
-    s = s.replace("!","");
-    }
-    console.log(s);
-    return s
-    }
+function remove(s, n) {
+  for (var i = 0; i < n; i++) {
+    s = s.replace("!", "");
+  }
+  console.log(s);
+  return s;
+}
 
 remove("!bel!!i!!!eve!!!", 7);
 // End #10
 
 // Start #11  Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
-function replace(s){
-  console.log(s.replace(/[aeoiu]/ig, '!'))
-  return s.replace(/[aeoiu]/ig, '!')
+function replace(s) {
+  console.log(s.replace(/[aeoiu]/gi, "!"));
+  return s.replace(/[aeoiu]/gi, "!");
 }
 
-  replace("aeiou")
-  replace("What is Going On??")
+replace("aeiou");
+replace("What is Going On??");
+// End #11
+
+// SDJavascript warm-up - write out three exampls of how to de-duplicate an array.
+let dupes = [1, 1, 2, 3, 4, 4, 10, 5, 5];
+let unique = [...new Set(dupes)]
+console.log(unique)
+// don't ever next terniary's
+// using 'set'  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
+
+
+// Start #12 If you can't sleep, just count sheep!!
+
+var countSheep = function (num){
+  // count up and concantenate until count = n   count = (n-(n-1)) + 1
+  let count = num-(num-1);
+  let phrase = "";
+  while (count <= num) {
+    let fragmentPhrase = count + " sheep... "
+    phrase = phrase.concat(fragmentPhrase);
+    count++;
+    }
+    console.log(phrase)
+  }
+  countSheep(12);
+// End #12
+
+
+// Start #13 
+
