@@ -259,5 +259,15 @@ var countSheep = function (num){
 // End #12
 
 
-// Start #13 
+// Start #13  A wolf in sheep's clothing
 
+function shortCut(arr) {
+  var wolf = (arr.indexOf("wolf")+1);
+  var dinner = arr.length - wolf;
+  // console.log("arr length is " + arr.length + "   and then wolf is " + wolf);
+  console.log (wolf === arr.length ? "Please go away and stop eating my sheep!" : "Oi! Sheep number " + dinner + "! You are about to be eaten by a wolf!"
+  )
+}
+let theHerd = ["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep", "sheep", "sheep"];
+shortCut(theHerd)
+// Emd #13   this one was FUN and my answer a bit more elegant than previous kata solutions
