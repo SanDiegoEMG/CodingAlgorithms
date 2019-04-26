@@ -236,38 +236,114 @@ replace("What is Going On??");
 
 // SDJavascript warm-up - write out three exampls of how to de-duplicate an array.
 let dupes = [1, 1, 2, 3, 4, 4, 10, 5, 5];
-let unique = [...new Set(dupes)]
-console.log(unique)
+let unique = [...new Set(dupes)];
+console.log(unique);
 // don't ever next terniary's
 // using 'set'  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 
-
 // Start #12 If you can't sleep, just count sheep!!
 
-var countSheep = function (num){
+var countSheep = function(num) {
   // count up and concantenate until count = n   count = (n-(n-1)) + 1
-  let count = num-(num-1);
+  let count = num - (num - 1);
   let phrase = "";
   while (count <= num) {
-    let fragmentPhrase = count + " sheep... "
+    let fragmentPhrase = count + " sheep... ";
     phrase = phrase.concat(fragmentPhrase);
     count++;
-    }
-    console.log(phrase)
   }
-  countSheep(12);
+  console.log(phrase);
+};
+countSheep(12);
 // End #12
-
 
 // Start #13  A wolf in sheep's clothing
 
 function shortCut(arr) {
-  var wolf = (arr.indexOf("wolf")+1);
+  var wolf = arr.indexOf("wolf") + 1;
   var dinner = arr.length - wolf;
   // console.log("arr length is " + arr.length + "   and then wolf is " + wolf);
-  console.log (wolf === arr.length ? "Please go away and stop eating my sheep!" : "Oi! Sheep number " + dinner + "! You are about to be eaten by a wolf!"
-  )
+  console.log(
+    wolf === arr.length
+      ? "Please go away and stop eating my sheep!"
+      : "Oi! Sheep number " + dinner + "! You are about to be eaten by a wolf!"
+  );
 }
-let theHerd = ["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep", "sheep", "sheep"];
-shortCut(theHerd)
+let theHerd = [
+  "sheep",
+  "sheep",
+  "sheep",
+  "sheep",
+  "sheep",
+  "wolf",
+  "sheep",
+  "sheep",
+  "sheep",
+  "sheep"
+];
+shortCut(theHerd);
 // Emd #13   this one was FUN and my answer a bit more elegant than previous kata solutions
+
+// Start #14  Training JS #8: Conditional statement--switch
+// function howManydays(month) {
+//   var days = "";
+//   var thirtyRegex = /4|6|9|11/;
+//   var thirtyoneRegex = /1|3|5|7|8|10|12/;
+//   var short = thirtyRegex.test(month);
+//   var long = thirtyoneRegex.test(month);
+
+//   if (long) {
+//     days = 31;
+//   } else if (short) {
+//     days = 30;
+//   } else {
+//     days = 28;
+//   }
+//  console.log (days);
+// }
+
+function howManydays(month) {
+  var days;
+  switch (month) {
+    case 1:
+      days = 31;
+      break;
+    case 2:
+      days = 28;
+      break;
+    case 3:
+      days = 31;
+      break;
+    case 4:
+      days = 30;
+      break;
+    case 5:
+      days = 31;
+      break;
+    case 6:
+      days = 30;
+      break;
+    case 7:
+      days = 31;
+      break;
+    case 8:
+      days = 31;
+      break;
+    case 9:
+      days = 30;
+      break;
+    case 10:
+      days = 31;
+      break;
+    case 11:
+      days = 30;
+      break;
+    case 12:
+      days = 31;
+      break;
+  }
+  console.log(days);
+}
+
+howManydays(11);
+// End #14. I like my regex and if/else solution but the kata required a switch statement.
