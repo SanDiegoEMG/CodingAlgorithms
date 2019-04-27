@@ -347,3 +347,17 @@ function howManydays(month) {
 
 howManydays(11);
 // End #14. I like my regex and if/else solution but the kata required a switch statement.
+
+
+// Start #15 - Reduce but Grow
+function grow(x){
+  let total = x[0] * x[1];
+  for (var i=2; i<x.length; i++) {
+    let multiplier = x[i];
+    total = total * multiplier
+  }
+  console.log(total)
+  }
+
+  grow([1, 2, 3, 4])
+  // End #15 - Heck yeah! Getting a little smoother and quicker on the logic
