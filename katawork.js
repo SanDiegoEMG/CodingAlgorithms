@@ -361,3 +361,19 @@ function grow(x){
 
   grow([1, 2, 3, 4])
   // End #15 - Heck yeah! Getting a little smoother and quicker on the logic
+
+  // Start #16  Sum Mixed Array
+  function sumMix(x){
+    const numArr = x.map(i => parseInt(i));
+    const sum = numArr.reduce((total, amount) => total + amount); 
+    console.log(sum)
+    }
+
+    let mixedArray = [1, 3, 5, "700", 3, "1000"];
+
+    sumMix(mixedArray)
+  // End #16 - best Google Foo I've done in a while!
+    
+    
+    
+    
