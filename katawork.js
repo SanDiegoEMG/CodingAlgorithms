@@ -393,9 +393,37 @@ function spinningRings(innerMax, outerMax) {
   }
 
   if (inNum === outNum) {
-    console.log (counter);
+    console.log(counter);
   }
 }
 spinningRings(3, 3);
 
 // End #17 - was a good challenge!
+
+// Start #18  Complementary DNA
+function DNAStrand(dna) {
+  let newArr = [];
+  let newString = "";
+  for (let i = 0; i < dna.length; i++) {
+    if (dna[i] === "A") {
+      newArr.push("T");
+    }
+    if (dna[i] === "T") {
+      newArr.push("A");
+    }
+    if (dna[i] === "G") {
+      newArr.push("C");
+    }
+    if (dna[i] === "C") {
+      newArr.push("G");
+    }
+    newString = newArr.toString().replace(/,/g, "");
+  }
+
+  console.log(typeof newArr);
+  console.log(newString);
+  console.log(typeof newString);
+}
+
+DNAStrand("ATTGAC");
+// End #18  - good morning Kata ... eager to see other solutions. Mine felt - clunky.
