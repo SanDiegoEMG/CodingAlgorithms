@@ -348,32 +348,54 @@ function howManydays(month) {
 howManydays(11);
 // End #14. I like my regex and if/else solution but the kata required a switch statement.
 
-
 // Start #15 - Reduce but Grow
-function grow(x){
+function grow(x) {
   let total = x[0] * x[1];
-  for (var i=2; i<x.length; i++) {
+  for (var i = 2; i < x.length; i++) {
     let multiplier = x[i];
-    total = total * multiplier
+    total = total * multiplier;
   }
-  console.log(total)
-  }
+  console.log(total);
+}
 
-  grow([1, 2, 3, 4])
-  // End #15 - Heck yeah! Getting a little smoother and quicker on the logic
+grow([1, 2, 3, 4]);
+// End #15 - Heck yeah! Getting a little smoother and quicker on the logic
 
-  // Start #16  Sum Mixed Array
-  function sumMix(x){
-    const numArr = x.map(i => parseInt(i));
-    const sum = numArr.reduce((total, amount) => total + amount); 
-    console.log(sum)
+// Start #16  Sum Mixed Array
+function sumMix(x) {
+  const numArr = x.map(i => parseInt(i));
+  const sum = numArr.reduce((total, amount) => total + amount);
+  console.log(sum);
+}
+
+let mixedArray = [1, 3, 5, "700", 3, "1000"];
+
+sumMix(mixedArray);
+// End #16 - best Google Foo I've done in a while!
+
+// Start #17 - Spinning Rings
+
+function spinningRings(innerMax, outerMax) {
+  let inNum = innerMax;
+  let counter = 1;
+  let outNum = 1;
+
+  while (inNum != outNum) {
+    inNum--;
+    outNum++;
+    counter++;
+    if (inNum < 0) {
+      inNum = innerMax;
     }
+    if (outNum > outerMax) {
+      outNum = 0;
+    }
+  }
 
-    let mixedArray = [1, 3, 5, "700", 3, "1000"];
+  if (inNum === outNum) {
+    console.log (counter);
+  }
+}
+spinningRings(3, 3);
 
-    sumMix(mixedArray)
-  // End #16 - best Google Foo I've done in a while!
-    
-    
-    
-    
+// End #17 - was a good challenge!
