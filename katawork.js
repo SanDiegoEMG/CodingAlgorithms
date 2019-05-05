@@ -427,3 +427,39 @@ function DNAStrand(dna) {
 
 DNAStrand("ATTGAC");
 // End #18  - good morning Kata ... eager to see other solutions. Mine felt - clunky.
+
+// Start #19  Coloured Triangles
+function triangle(row) {
+  // let newString = "";
+  // for (let i = 0; i < row.length -1; i++) {
+  //   let duo = row[i] + row[i+1];
+  //   console.log("I am duo and i round: " + duo + "  " + i + " and i+1 " + (i+1) );
+  //   if (row[i] === row[i + 1]) {
+  //     newString = newString.concat(row[i]);
+  //     console.log("Same two letters: " + row[i] + " and newString is now: "  + newString + " at " + i);
+  //   }  else if (!row[i] || !row[(i + 1)]) {
+  //     newString = newString.concat("WTF");
+  //     console.log("WTF " + newString);
+  //   }
+  //   else if (row[i] + row[i + 1] === "B" && "G") {
+  //     newString = newString.concat("R");
+  //     console.log("BG or GB at: " + i +  " + newString: " +  newString);
+  //   }
+  // }
+  let newArray = row.split("");
+  let finalAnswer = ""
+  console.log(newArray);
+  for (let i = 0; i < newArray.length - 1; i++) {
+    let nextLet = newArray[i+1];
+    if (newArray[i] === nextLet) {
+      finalAnswer = finalAnswer.concat(newArray[i])
+      console.log("same letter: " + newArray[i] + " round: " + i + " finalAnswer = " + finalAnswer);
+
+    } if (newArray[i] != nextLet && (newArray[i] && nextLet === "B" || "G")) {
+      finalAnswer = finalAnswer.concat("R");
+      console.log("this is B or G combo: " + newArray[i] + " round: " + i + " finalAnswer = " + finalAnswer);
+    }
+  }
+}
+
+triangle("GGBGEEE");
