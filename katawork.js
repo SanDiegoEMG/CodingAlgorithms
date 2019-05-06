@@ -427,7 +427,6 @@ function DNAStrand(dna) {
 DNAStrand("ATTGAC");
 // End #18  - good morning Kata ... eager to see other solutions. Mine felt - clunky.
 
-
 // ====================================================================
 
 // BONUS: BUBBLE SORT!
