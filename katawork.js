@@ -28,7 +28,7 @@ abbrevName("Evan Cole");
 abbrevName("David Mendieta");
 abbrevName("P Favuzzi");
 // End #1
-
+// ====================================================================
 // #2
 //  loop through string
 //  ignore anything that isn't a letter
@@ -55,7 +55,7 @@ function alphabetPosition(text) {
 
 alphabetPosition(practiceString);
 // End #2
-
+// ====================================================================
 // #3  Find numbers which are divisible by given number
 function divisibleBy(numbers, divisor) {
   const divArray = [];
@@ -68,7 +68,7 @@ function divisibleBy(numbers, divisor) {
 }
 divisibleBy([3, 5, 6, 8, 9, 14, 16, 22, 25, 36, 38], 5);
 // End #3
-
+// ====================================================================
 // #4 Highest Scoring Word (6 kyu)
 // Given a string of words, find the highest scoring word.
 
@@ -105,7 +105,7 @@ function highScoreWord(str) {
 highScoreWord(practiceString);
 highScoreWord("Oh what a wonderful morning, oh what a wonderful day!");
 // End #4
-
+// ====================================================================
 // Start #5   Circle of Numbers
 function circleOfNumbers(n, firstNumber) {
   // let totalNumbers = (n + 1) - firstNumber;
@@ -120,7 +120,7 @@ function circleOfNumbers(n, firstNumber) {
 
 circleOfNumbers(10, 7);
 // End #5
-
+// ====================================================================
 // Start #6  "Who is going to pay for the wall?""
 function whoIsPaying(name) {
   // show full name
@@ -143,7 +143,7 @@ whoIsPaying("Gopher");
 //return (name.length>2)?([name, name.substr(0,2)]):[name];
 //}
 // End #6
-
+// ====================================================================
 // Start #7  Reverse words
 // Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
 // "This is an example!" ==> "sihT si na !elpmaxe"
@@ -163,7 +163,7 @@ console.log(reverseWords("The quick brown fox jumped over the lazy dog."));
 
 // Thanks for that one Stack Overflow
 // End #7
-
+// ====================================================================
 // Start #8   Filter out the Geese
 var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
 var birds = [
@@ -201,7 +201,7 @@ gooseFilter(birds);
 filterFun(birds);
 
 // End #8
-
+// ====================================================================
 // Start #9  Regex count lowercase letters
 function lowercaseCount(str) {
   var lowers = str.match(/[a-z]/g);
@@ -211,7 +211,7 @@ function lowercaseCount(str) {
 lowercaseCount(practiceString);
 lowercaseCount("this is SHOUTING");
 // End #9
-
+// ====================================================================
 // Start #10  Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
 function remove(s, n) {
   for (var i = 0; i < n; i++) {
@@ -233,14 +233,14 @@ function replace(s) {
 replace("aeiou");
 replace("What is Going On??");
 // End #11
-
+// ====================================================================
 // SDJavascript warm-up - write out three exampls of how to de-duplicate an array.
 let dupes = [1, 1, 2, 3, 4, 4, 10, 5, 5];
 let unique = [...new Set(dupes)];
 console.log(unique);
 // don't ever next terniary's
 // using 'set'  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
-
+// ====================================================================
 // Start #12 If you can't sleep, just count sheep!!
 
 var countSheep = function(num) {
@@ -256,9 +256,8 @@ var countSheep = function(num) {
 };
 countSheep(12);
 // End #12
-
+// ====================================================================
 // Start #13  A wolf in sheep's clothing
-
 function shortCut(arr) {
   var wolf = arr.indexOf("wolf") + 1;
   var dinner = arr.length - wolf;
@@ -283,7 +282,7 @@ let theHerd = [
 ];
 shortCut(theHerd);
 // Emd #13   this one was FUN and my answer a bit more elegant than previous kata solutions
-
+// ====================================================================
 // Start #14  Training JS #8: Conditional statement--switch
 // function howManydays(month) {
 //   var days = "";
@@ -347,7 +346,7 @@ function howManydays(month) {
 
 howManydays(11);
 // End #14. I like my regex and if/else solution but the kata required a switch statement.
-
+// ====================================================================
 // Start #15 - Reduce but Grow
 function grow(x) {
   let total = x[0] * x[1];
@@ -360,7 +359,7 @@ function grow(x) {
 
 grow([1, 2, 3, 4]);
 // End #15 - Heck yeah! Getting a little smoother and quicker on the logic
-
+// ====================================================================
 // Start #16  Sum Mixed Array
 function sumMix(x) {
   const numArr = x.map(i => parseInt(i));
@@ -372,7 +371,7 @@ let mixedArray = [1, 3, 5, "700", 3, "1000"];
 
 sumMix(mixedArray);
 // End #16 - best Google Foo I've done in a while!
-
+// ====================================================================
 // Start #17 - Spinning Rings
 
 function spinningRings(innerMax, outerMax) {
@@ -399,7 +398,7 @@ function spinningRings(innerMax, outerMax) {
 spinningRings(3, 3);
 
 // End #17 - was a good challenge!
-
+// ====================================================================
 // Start #18  Complementary DNA
 function DNAStrand(dna) {
   let newArr = [];
@@ -428,38 +427,32 @@ function DNAStrand(dna) {
 DNAStrand("ATTGAC");
 // End #18  - good morning Kata ... eager to see other solutions. Mine felt - clunky.
 
-// Start #19  Coloured Triangles
-function triangle(row) {
-  // let newString = "";
-  // for (let i = 0; i < row.length -1; i++) {
-  //   let duo = row[i] + row[i+1];
-  //   console.log("I am duo and i round: " + duo + "  " + i + " and i+1 " + (i+1) );
-  //   if (row[i] === row[i + 1]) {
-  //     newString = newString.concat(row[i]);
-  //     console.log("Same two letters: " + row[i] + " and newString is now: "  + newString + " at " + i);
-  //   }  else if (!row[i] || !row[(i + 1)]) {
-  //     newString = newString.concat("WTF");
-  //     console.log("WTF " + newString);
-  //   }
-  //   else if (row[i] + row[i + 1] === "B" && "G") {
-  //     newString = newString.concat("R");
-  //     console.log("BG or GB at: " + i +  " + newString: " +  newString);
-  //   }
-  // }
-  let newArray = row.split("");
-  let finalAnswer = ""
-  console.log(newArray);
-  for (let i = 0; i < newArray.length - 1; i++) {
-    let nextLet = newArray[i+1];
-    if (newArray[i] === nextLet) {
-      finalAnswer = finalAnswer.concat(newArray[i])
-      console.log("same letter: " + newArray[i] + " round: " + i + " finalAnswer = " + finalAnswer);
 
-    } if (newArray[i] != nextLet && (newArray[i] && nextLet === "B" || "G")) {
-      finalAnswer = finalAnswer.concat("R");
-      console.log("this is B or G combo: " + newArray[i] + " round: " + i + " finalAnswer = " + finalAnswer);
-    }
-  }
+// ====================================================================
+
+// BONUS: BUBBLE SORT!
+var exNumArray = [9, 2, 2, 3, 12, 5, 6, 4, 3, 7, 10, 17, 1, 8];
+
+// swap function helper
+function swap(array, i, j) {
+  var temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
 }
 
-triangle("GGBGEEE");
+// correct implementation of Bubble Sort: this is the usual implementation of the bubble sort algorithm. Some loops execution are avoided if not they are not needed
+function bubbleSort(array) {
+  var swapped;
+  do {
+    swapped = false;
+    for (var i = 0; i < array.length; i++) {
+      if (array[i] && array[i + 1] && array[i] > array[i + 1]) {
+        swap(array, i, i + 1);
+        swapped = true;
+      }
+    }
+  } while (swapped);
+  return array;
+}
+
+console.log(bubbleSort(exNumArray)); // => [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
