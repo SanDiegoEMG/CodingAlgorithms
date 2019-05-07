@@ -455,3 +455,25 @@ function bubbleSort(array) {
 }
 
 console.log(bubbleSort(exNumArray)); // => [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+// ====================================================================
+
+// Start #19 - Check the Exam
+function checkExam(array1, array2) {
+  let grade = 0;
+  for (let i = 0; i < array1.length; i++) {
+    if (array1[i] === array2[i]) {
+      grade = grade + 4;
+    } else if (!array2[i]) {
+      grade = grade;
+    } else if (array1[i] != array2[i]) {
+      grade--;
+    }
+  }
+  console.log (grade>=0 ? grade : 0);
+}
+
+checkExam(["b", "c", "b", "a"], ["", "a", "b", "c"]);
+
+// End #19
+// ====================================================================
+// Start #20
