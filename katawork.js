@@ -159,7 +159,7 @@ function reverseWords(str) {
     .join(" ");
 }
 
-console.log(reverseWords("The quick brown fox jumped over the lazy dog."));
+console.log(reverseWords("The quick brown   fox jumped over the lazy dog."));
 
 // Thanks for that one Stack Overflow
 // End #7
