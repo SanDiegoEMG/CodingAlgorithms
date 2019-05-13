@@ -476,4 +476,9 @@ checkExam(["b", "c", "b", "a"], ["", "a", "b", "c"]);
 
 // End #19
 // ====================================================================
-// Start #20
+// Start #20 - Remove String Spaces
+function noSpace(x){
+  console.log(x.split(' ').join(''));
+  }
+
+  noSpace('8 j 8   mBliB8g  imjB8B8  jl  B');
