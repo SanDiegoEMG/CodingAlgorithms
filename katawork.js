@@ -498,4 +498,12 @@ function removeEveryOther(arr){
 removeEveryOther(['Hello', 'Goodbye', 'Hello Again', 'Blessings', 'Beauty']);
 // End #21
 // ====================================================================
-// Start #22
+// Start #22 - Lost without a map
+function maps(x){
+  console.log (x.map(x => x * 2))
+  }
+
+  maps([3, 4, 8, 2, 1, 3, 7])
+// End #22
+// ====================================================================
+// Start #23
