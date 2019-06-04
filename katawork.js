@@ -481,6 +481,21 @@ function noSpace(x){
   console.log(x.split(' ').join(''));
   }
   noSpace('8 j 8   mBliB8g  imjB8B8  jl  B');
-  // End #20
+// End #20
 // ====================================================================
-// Start #21 
+// Start #21 - Removing Elements
+
+function removeEveryOther(arr){
+  let newArr = [arr[0]]
+   for (i=0; i< arr.length; i++) {
+     if (i != 0 && i%2===0) {
+      newArr.push(arr[i])
+     }
+   }
+   console.log(newArr)
+ }
+
+removeEveryOther(['Hello', 'Goodbye', 'Hello Again', 'Blessings', 'Beauty']);
+// End #21
+// ====================================================================
+// Start #22
