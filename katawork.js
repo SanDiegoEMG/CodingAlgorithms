@@ -506,4 +506,14 @@ function maps(x){
   maps([3, 4, 8, 2, 1, 3, 7])
 // End #22
 // ====================================================================
-// Start #23
+// Start #23 - Correct the mistakes of the character recognition software
+function correct(string)
+{
+  var noS = string.replace(/5/g, "S");
+  var noO = noS.replace(/1/g, "I");
+  var final = noO.replace(/0/g, "O");
+  console.log(final)
+  };
+
+  correct ("0h wa1t, 5usta1ner am 1?")
+  
