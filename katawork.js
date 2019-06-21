@@ -516,4 +516,18 @@ function correct(string)
   };
 
   correct ("0h wa1t, 5usta1ner am 1?")
-  
+  // End #23
+  // =====================================================================
+  //Start #24 -  Count by X
+
+  function countBy(x, n) {
+    var z = [];
+    var i = (z.length) +1;
+    while (i <= n) {
+    z.push(x*i)
+    i++
+    }  
+  console.log(z);
+  }
+
+  countBy(2, 6);
